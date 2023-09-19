@@ -1,0 +1,18 @@
+.container {
+    paddinng: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+}
+
+.input {
+    width: 100%;
+}
+
+.label {
+    margin: 5px;
+    margin-bottom: 20px;
+}
