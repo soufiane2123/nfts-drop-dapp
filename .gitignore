@@ -38,7 +38,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-/README.md
+README.md
 
 # testing
 /coverage
