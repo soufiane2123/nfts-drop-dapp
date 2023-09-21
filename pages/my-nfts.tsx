@@ -4,12 +4,14 @@ import Header from "../components/Header"
 import { useContract, useNFTs, ThirdwebNftMedia, useAddress } from "@thirdweb-dev/react"
 
 const MyNfts: NextPage = () => {
-    const { contract } = useContract("0x282CC1699CEb1f00794b5B44c0f00Fde6CdC0706")
+    const { contract } = useContract("0x282cc1699ceb1f00794b5b44c0f00fde6cdc0706")
 
     const address = useAddress()
     const { data: nfts, isLoading, error } = useNFTs(contract)
 
-    console.log(nfts)
+    const walletNotConnectedMessage = (
+        <p className={styles.para}> Connect your wallet to view your NFTs</p>
+    )
 
     return (
         <div className={styles.container}>
@@ -17,6 +19,8 @@ const MyNfts: NextPage = () => {
             <section className={styles.info}>
                 {isLoading ? (
                     <p>Loading...</p>
+                ) : !address ? (
+                    walletNotConnectedMessage
                 ) : (
                     nfts
                         ?.filter((nft) => nft.owner == address)

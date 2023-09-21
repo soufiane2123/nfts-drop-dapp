@@ -11,3 +11,8 @@
     flex-wrap: wrap;
     gap: 24px;
 }
+
+.para {
+    font-size: 20px;
+    font-weight: bold;
+}

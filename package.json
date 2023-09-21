@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@thirdweb-dev/chains": "^0.1.52",
-    "@thirdweb-dev/react": "^3",
-    "@thirdweb-dev/sdk": "^3",
+    "@thirdweb-dev/react": "^3.15.0",
+    "@thirdweb-dev/sdk": "^3.10.61",
     "ethers": "^5",
     "next": "^13",
     "react": "^18.2",
