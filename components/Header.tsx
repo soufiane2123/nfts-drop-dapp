@@ -20,16 +20,16 @@ const Header: React.FC = () => {
                         My NFTs
                     </a>
                 </Link>
+                <Link legacyBehavior href={"/fetch"}>
+                    <a className={router.pathname == "/fetch" ? styles.active : styles.link}>
+                        Fetch NFTs
+                    </a>
+                </Link>
                 <Link legacyBehavior href={"/buyMeACoffee"}>
                     <a className={router.pathname == "/buyMeACoffee" ? styles.active : styles.link}>
                         Buy Me a Coffee
                     </a>
                 </Link>
-                {/* <Link legacyBehavior href={"/write-note"}>
-                    <a className={router.pathname == "/write-note" ? styles.active : styles.link}>
-                        Write Note
-                    </a>
-                </Link> */}
                 {/* <Link legacyBehavior href={"/mint"}>
                     <a className={router.pathname == "/mint" ? styles.active : styles.link}>Mint</a>
                 </Link> */}
@@ -37,7 +37,8 @@ const Header: React.FC = () => {
             <div className={styles.connectWallet}>
                 {router.pathname === "/" ||
                 router.pathname === "/buyMeACoffee" ||
-                router.pathname === "/nfts" ? null : (
+                router.pathname === "/nfts" ||
+                router.pathname === "/fetch" ? null : (
                     <ConnectWallet />
                 )}
             </div>
