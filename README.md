@@ -35,11 +35,11 @@ To get started with this project, follow these steps:
 
 4. **Access the DApp**: Open your web browser and go to http://localhost:3000 to access the NFT Drop Collection DApp.
 
-##Contributing
+## Contributing
 
 We welcome contributions from the community. If you'd like to contribute to the project, please fork the repository, make your changes, and submit a pull request. We'll review and merge your contributions.
 
-##Support
+## Support
 
 If you encounter any issues or have questions, feel free to open an issue on GitHub. 
 
