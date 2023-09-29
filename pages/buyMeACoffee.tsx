@@ -6,7 +6,7 @@ import styles from "../styles/buyMeACoffee.module.css"
 import Header from "../components/Header"
 
 export default function Home() {
-    // Contract Address & ABI
+    // My wallet if you want to buy me a coffee
     const contractAddress = "0x929f12B944826fE12A59fB5b33965296e9d1b89C"
     const contractABI = abi.abi
 

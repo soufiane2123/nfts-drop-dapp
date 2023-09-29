@@ -13,6 +13,7 @@ const Home: NextPage = () => {
                 <p>Description.....</p>
                 <br />
                 <Web3Button
+                    // Replace with your contract address in the code.
                     contractAddress="0x282CC1699CEb1f00794b5B44c0f00Fde6CdC0706"
                     action={(contract) => contract.erc721.claim(1)}
                 >

@@ -14,7 +14,7 @@ const Home = () => {
     const fetchNFTs = async () => {
         let nfts
         console.log("fetching nfts")
-        const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C"
+        const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
         const baseURL = `https://eth-goerli.alchemyapi.io/v2/${api_key}/getNFTs/`
 
         if (!collection.length) {
@@ -42,7 +42,7 @@ const Home = () => {
             var requestOptions = {
                 method: "GET",
             }
-            const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C"
+            const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
             const baseURL = `https://eth-goerli.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`
             const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`
             const nfts = await fetch(fetchURL, requestOptions).then((data) => data.json())
