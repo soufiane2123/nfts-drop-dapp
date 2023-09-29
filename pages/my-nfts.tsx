@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import { useContract, useNFTs, ThirdwebNftMedia, useAddress } from "@thirdweb-dev/react"
 
 const MyNfts: NextPage = () => {
-    const { contract } = useContract("0x282cc1699ceb1f00794b5b44c0f00fde6cdc0706")
+    const { contract } = useContract("0x8b4E9886F180214c594791C04EAcaAce8614b641")
 
     const address = useAddress()
     const { data: nfts, isLoading, error } = useNFTs(contract)

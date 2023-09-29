@@ -78,11 +78,6 @@ export default function Home() {
                 console.log("mined ", coffeeTxn.hash)
 
                 console.log("coffee purchased!")
-
-                // Clear the form fields.
-                setName("")
-                setMessage("")
-                // You can choose to clear the amount input here as well if needed.
             }
         } catch (error) {
             console.log(error)
