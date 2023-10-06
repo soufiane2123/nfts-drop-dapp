@@ -4,6 +4,7 @@ import { useState } from "react"
 import { NFTCard } from "../components/nftCard"
 import styles from "../styles/buyMeACoffee.module.css"
 import Header from "../components/Header"
+import { AlchemyapiKey } from "../consts/parameters"
 
 const Home = () => {
     const [wallet, setWalletAddress] = useState("")
@@ -14,8 +15,8 @@ const Home = () => {
     const fetchNFTs = async () => {
         let nfts
         console.log("fetching nfts")
-        const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
-        const baseURL = `https://eth-goerli.alchemyapi.io/v2/${api_key}/getNFTs/`
+        // const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
+        const baseURL = `https://eth-goerli.alchemyapi.io/v2/${AlchemyapiKey}/getNFTs/`
 
         if (!collection.length) {
             var requestOptions = {
@@ -42,8 +43,8 @@ const Home = () => {
             var requestOptions = {
                 method: "GET",
             }
-            const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
-            const baseURL = `https://eth-goerli.alchemyapi.io/v2/${api_key}/getNFTsForCollection/`
+            // const api_key = "zQkHCN5EFwPC7AVYATrnGwheQOWhTA7C" // put youre alchemy api key
+            const baseURL = `https://eth-goerli.alchemyapi.io/v2/${AlchemyapiKey}/getNFTsForCollection/`
             const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`
             const nfts = await fetch(fetchURL, requestOptions).then((data) => data.json())
             if (nfts) {

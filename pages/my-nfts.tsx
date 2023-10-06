@@ -1,11 +1,12 @@
-import styles from "../styles/MyNfts.module.css"
-import { NextPage } from "next"
-import Header from "../components/Header"
-import { useContract, useNFTs, ThirdwebNftMedia, useAddress } from "@thirdweb-dev/react"
+import styles from '../styles/MyNfts.module.css'
+import { NextPage } from 'next'
+import Header from '../components/Header'
+import { useContract, useNFTs, ThirdwebNftMedia, useAddress } from '@thirdweb-dev/react'
+import { contractAddress } from '../consts/parameters'
 
 const MyNfts: NextPage = () => {
     // Replace with your contract address in the code.
-    const { contract } = useContract("0x8b4E9886F180214c594791C04EAcaAce8614b641")
+    const { contract } = useContract(contractAddress)
 
     const address = useAddress()
     const { data: nfts, isLoading, error } = useNFTs(contract)
@@ -31,7 +32,7 @@ const MyNfts: NextPage = () => {
                                     <ThirdwebNftMedia
                                         metadata={nft.metadata}
                                         height="200"
-                                        style={{ borderRadius: "10px" }}
+                                        style={{ borderRadius: '10px' }}
                                     />
                                     <p>
                                         ID: {nft.metadata.id} | {nft.metadata.name}

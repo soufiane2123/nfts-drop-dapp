@@ -14,6 +14,8 @@ Welcome to the NFT Drop Collection DApp! This decentralized application allows y
 
 - **Fetch NFT Data by Address**: Find out which NFTs are owned by a specific address. Enter the address, and you'll get a list of the NFTs they own.
 
+- **Fetch Tokens Data by Address**: Find out which Tokens are owned by a specific address. Enter the address, and you'll get a list of the Tokens they own.
+
 - **Buy Me a Coffee Page**: If you find this project helpful, consider supporting us with a cup of coffee. Your contributions help us maintain and improve this DApp.
 
 ## Getting Started
@@ -27,13 +29,21 @@ To get started with this project, follow these steps:
    cd nft-drop-collection-dapp
    yarn install
 
-2. **Replace NFT Smart Contract Address**: In the source code, replace the placeholder for the NFT smart contract address with your contract address. Look for comments like // Replace with your contract address in the code.
-3. **Run the DApp**: Start the DApp on Localhost by running the following command:
+2. **Environment Variables**: To run this project, you will need to add environment variables. Check the *.env.example* file for all the environment variables required and add it to *.env.local* file or set them up on your hosting provider.
+
+3. **Import Your NFT Collection**:
+Go to the `consts/parameters.ts` and update the following values:
+
+`contractAddress`: The smart contract address of your NFT collection.
+`chain`: The name of the chain that your smart contract is deployed to.
+`blockExplorer`: (Optional) - The block explorer to open when user's click on historical events of each NFT.
+
+4. **Run the DApp**: Start the DApp on Localhost by running the following command:
 
    ```bash
    yarn run dev
 
-4. **Access the DApp**: Open your web browser and go to http://localhost:3000 to access the NFT Drop Collection DApp.
+5. **Access the DApp**: Open your web browser and go to http://localhost:3000 to access the NFT Drop Collection DApp.
 
 ## Contributing
 
